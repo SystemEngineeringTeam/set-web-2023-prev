@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import Color from "@/const/Color";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
@@ -54,7 +54,7 @@ type Battery = {
 };
 
 type NavigatorGetBattery = Navigator & {
-  getBattery: () => Promise<Battery>;
+  getBattery?: () => Promise<Battery>;
 };
 
 export default function Header() {
@@ -69,16 +69,19 @@ export default function Header() {
       setTime(new Date());
     }, 1000);
 
-    (navigator as NavigatorGetBattery).getBattery().then((battery: Battery) => {
-      setBatteryLevel(battery.level * 100);
-      setIsCharging(battery.charging);
-      battery.addEventListener("levelchange", () => {
+    const nav = navigator as NavigatorGetBattery;
+    if (nav.getBattery) {
+      nav.getBattery().then((battery: Battery) => {
         setBatteryLevel(battery.level * 100);
-      });
-      battery.addEventListener("chargingchange", () => {
         setIsCharging(battery.charging);
+        battery.addEventListener("levelchange", () => {
+          setBatteryLevel(battery.level * 100);
+        });
+        battery.addEventListener("chargingchange", () => {
+          setIsCharging(battery.charging);
+        });
       });
-    });
+    }
   }, []);
 
   return (
