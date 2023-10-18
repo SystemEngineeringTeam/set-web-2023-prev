@@ -52,6 +52,10 @@ type Battery = {
   addEventListener: (arg0: string, arg1: () => void) => void;
 };
 
+type NavigatorGetBattery = Navigator & {
+  getBattery: () => Promise<Battery>;
+};
+
 export default function Header() {
   const [time, setTime] = useState<null | Date>(null);
   const [batteryLevel, setBatteryLevel] = useState<number>(100);
@@ -63,7 +67,7 @@ export default function Header() {
       setTime(new Date());
     }, 1000);
 
-    navigator.getBattery().then((battery: Battery) => {
+    (navigator as NavigatorGetBattery).getBattery().then((battery: Battery) => {
       setBatteryLevel(battery.level * 100);
       battery.addEventListener("levelchange", () => {
         setBatteryLevel(battery.level * 100);
