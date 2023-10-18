@@ -1,9 +1,10 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import Color from "@/const/Color";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { toDigits } from "@/util/util";
 import Battery from "./Battery";
+import Image from "next/image";
 
 const HeaderEle = styled.header`
   height: 40px;
@@ -21,11 +22,6 @@ const Menu = styled.div`
   align-items: center;
   height: 100%;
   gap: 10px;
-`;
-
-const Logo = styled.img`
-  cursor: pointer;
-  height: 100%;
 `;
 
 type SpanProps = {
@@ -53,6 +49,7 @@ const Spacer = styled.span`
 
 type Battery = {
   level: number;
+  charging: boolean;
   addEventListener: (arg0: string, arg1: () => void) => void;
 };
 
@@ -63,6 +60,7 @@ type NavigatorGetBattery = Navigator & {
 export default function Header() {
   const [time, setTime] = useState<null | Date>(null);
   const [batteryLevel, setBatteryLevel] = useState<number>(100);
+  const [isCharging, setIsCharging] = useState<boolean>(false);
   const router = useRouter();
 
   useEffect(() => {
@@ -73,8 +71,12 @@ export default function Header() {
 
     (navigator as NavigatorGetBattery).getBattery().then((battery: Battery) => {
       setBatteryLevel(battery.level * 100);
+      setIsCharging(battery.charging);
       battery.addEventListener("levelchange", () => {
         setBatteryLevel(battery.level * 100);
+      });
+      battery.addEventListener("chargingchange", () => {
+        setIsCharging(battery.charging);
       });
     });
   }, []);
@@ -82,7 +84,16 @@ export default function Header() {
   return (
     <HeaderEle>
       <Menu>
-        <Logo src="/img/set.webp" onClick={() => router.push("/")} />
+        <Image
+          src="/img/set.webp"
+          alt="logo"
+          height={40}
+          width={40}
+          css={`
+            cursor: pointer;
+          `}
+          onClick={() => router.push("/")}
+        />
         <Propaty gap={5} onClick={() => router.push("/")}>
           シス研
         </Propaty>
@@ -92,7 +103,7 @@ export default function Header() {
         <Propaty gap={5}>NEWS</Propaty>
         <Propaty gap={5}>Q&A</Propaty>
         <Spacer />
-        <Battery level={batteryLevel} />
+        <Battery level={batteryLevel} isCharging={isCharging} />
         {time && (
           <>
             <Propaty>
