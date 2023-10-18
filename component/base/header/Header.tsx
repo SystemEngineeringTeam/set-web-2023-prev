@@ -1,15 +1,19 @@
 import styled from "styled-components";
-import { color } from "@/const/Color";
+import Color from "@/const/Color";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import Wifi from "./Wifi";
 import { toDigits } from "@/util/util";
 import Battery from "./Battery";
 
 const HeaderEle = styled.header`
   height: 40px;
   padding: 0 10px;
-  background-color: ${color.WHITE};
+  background-color: ${Color.WHITE};
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
 `;
 
 const Menu = styled.div`

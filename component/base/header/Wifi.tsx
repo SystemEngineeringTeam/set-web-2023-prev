@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { color } from "@/const/Color";
+import Color from "@/const/Color";
 
 type Props = {
   strength: 1 | 2 | 3 | 4;
@@ -10,7 +10,7 @@ const Svg = styled.svg`
 `;
 
 const Path = styled.path`
-  fill: ${color.DARK};
+  fill: ${Color.DARK};
 `;
 
 export default function Wifi({ strength }: Props) {

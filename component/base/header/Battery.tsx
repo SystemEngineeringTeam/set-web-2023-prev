@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { color } from "@/const/Color";
+import Color from "@/const/Color";
 
 type Props = {
   level: number;
@@ -12,11 +12,11 @@ const Svg = styled.svg`
 `;
 
 const Path = styled.path`
-  fill: ${color.DARK};
+  fill: ${Color.DARK};
 `;
 
 const Rect = styled.rect<{ level: number }>`
-  fill: ${color.DARK};
+  fill: ${Color.DARK};
   width: ${(props) => `${props.level * 0.74}%`};
   height: 73.45px;
 `;
