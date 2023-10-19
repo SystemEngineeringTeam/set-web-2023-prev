@@ -9,3 +9,8 @@ export function toDigits(num: number, n: number): string {
 export function getSNSUrl(snsUrl: string, id: string): string {
   return snsUrl.replace("{id}", id);
 }
+
+// 新しいタブでリンクを開く
+export function jumpToLink(link: string) {
+  window.open(link, "_blank");
+}

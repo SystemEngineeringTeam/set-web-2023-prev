@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Metadata from "@/component/base/Metadata";
 import Loading from "@/component/pages/loading/Loading";
 import Header from "@/component/base/header/Header";
+import Footer from "@/component/base/footer/Footer";
 
 const MainContent = dynamic(() => import("@/component/pages/home/Home"), {
   ssr: false,
@@ -26,6 +27,7 @@ export default function Home() {
       <Header />
       <Loading isLoading={isLoading} />
       <MainContent />
+      <Footer />
     </>
   );
 }

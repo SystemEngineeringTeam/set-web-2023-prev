@@ -6,7 +6,7 @@ import {
 } from "@/component/base/icons";
 import { SNS } from "@/const/base/sns";
 import { SNSName } from "@/type";
-import { getSNSUrl } from "@/util/util";
+import { getSNSUrl, jumpToLink } from "@/util/util";
 import styled from "styled-components";
 
 const Icon = styled.div<{ color: string; fill: string; snsName: string }>`
@@ -58,10 +58,6 @@ export default function App({ snsName, id, color, fill }: Props) {
       default:
         return <TwitterIcon />;
     }
-  }
-
-  function jumpToLink(link: string) {
-    window.open(link, "_blank");
   }
 
   return (
