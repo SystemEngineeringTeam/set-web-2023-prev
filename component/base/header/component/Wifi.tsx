@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Color from "@/const/Color";
+import Color from "@/const/style/Color";
 
 type Props = {
   strength: 1 | 2 | 3 | 4;

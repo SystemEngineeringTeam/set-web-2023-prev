@@ -1,4 +1,4 @@
-import Color from "@/const/Color";
+import Color from "@/const/style/Color";
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 

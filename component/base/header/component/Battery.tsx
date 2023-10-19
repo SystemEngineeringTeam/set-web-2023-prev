@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import Color from "@/const/Color";
+import Color from "@/const/style/Color";
 
 type Props = {
   level: number;

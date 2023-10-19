@@ -1,4 +1,4 @@
-import GlobalStyle from "@/const/GlobalStyle";
+import GlobalStyle from "@/const/style/GlobalStyle";
 import dynamic from "next/dynamic";
 import { useEffect, useState } from "react";
 import Metadata from "@/component/base/Metadata";
