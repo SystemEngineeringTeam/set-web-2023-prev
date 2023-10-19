@@ -1,3 +1,5 @@
+import { Post } from "@/type";
+
 export const TopText = ["ようこそ", "システム工学研究会へ"];
 
 export const DescriptionContents = [
@@ -16,3 +18,21 @@ export const DesctopImages = [
   "/img/top/door.webp",
   "/img/top/building.webp",
 ] as const;
+
+export const Posts: Post[] = [
+  {
+    title: "mocopiを触ってみた",
+    date: new Date("2023-10-19"),
+    content: "mocopiを触ってみた。mocopiはすごい。これは仮です。",
+  },
+  {
+    title: "MetaQuestを触ってみた",
+    date: new Date("2023-10-19"),
+    content: "MetaQuestを触ってみた。MetaQuestはすごい。これは仮です。",
+  },
+  {
+    title: "ペンギンと触れ合ってみた",
+    date: new Date("2005-01-05"),
+    content: "アデリーペンギンと触れ合った。とても可愛い。これは仮です。",
+  },
+];

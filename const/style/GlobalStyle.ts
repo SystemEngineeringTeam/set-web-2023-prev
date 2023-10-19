@@ -4,7 +4,7 @@ import Font from "@/const/style/Font";
 
 const GlobalStyle = createGlobalStyle`
   body > div > main {
-    background-color: ${Color.DARK};
+    background-color: ${Color.WHITE};
     min-height: 100vh;
   }
   * {

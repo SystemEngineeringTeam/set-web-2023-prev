@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 const AboutSection = styled.section`
   height: auto;
-  padding: 40px 0;
+  padding: 40px 20px;
   background-color: ${Color.WHITE};
 `;
 

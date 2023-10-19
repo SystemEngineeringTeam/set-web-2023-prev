@@ -7,6 +7,12 @@ export type SNSName = keyof typeof SNS;
 
 export type SNSAccountObj = {
   [key in SNSName]?: string;
-}
+};
 
 export type Colors = keyof typeof Color;
+
+export type Post = {
+  title: string;
+  date: Date;
+  content: string;
+};
