@@ -12,7 +12,7 @@ const CardEle = styled.div`
 
 const CardTitle = styled.h3`
   text-align: center;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: bold;
   overflow: hidden;
   text-overflow: ellipsis;
