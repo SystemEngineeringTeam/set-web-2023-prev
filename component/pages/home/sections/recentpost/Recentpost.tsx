@@ -13,6 +13,8 @@ const Title = styled.h2`
 `;
 
 const Grid = styled.div`
+  margin-inline: auto;
+  max-width: 1200px;
   padding: 0 20px;
   display: grid;
   justify-content: center;
