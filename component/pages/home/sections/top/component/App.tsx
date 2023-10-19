@@ -1,4 +1,9 @@
-import { GithubIcon, InstagramIcon, TwitterIcon } from "@/component/base/icons";
+import {
+  GithubIcon,
+  InstagramIcon,
+  QiitaIcon,
+  TwitterIcon,
+} from "@/component/base/icons";
 import { SNS } from "@/const/base/sns";
 import { SNSName } from "@/type";
 import { getSNSUrl } from "@/util/util";
@@ -14,7 +19,7 @@ const Icon = styled.div<{ color: string; fill: string; snsName: string }>`
   border-radius: 8px;
   cursor: pointer;
 
-  box-shadow: 2px 2px 5.3px rgba(255, 255, 255, 0.3);
+  box-shadow: 2px 2px white;
 
   &::after {
     content: ${(props) => props.snsName};
@@ -48,6 +53,8 @@ export default function App({ snsName, id, color, fill }: Props) {
         return <InstagramIcon />;
       case "github":
         return <GithubIcon />;
+      case "qiita":
+        return <QiitaIcon />;
       default:
         return <TwitterIcon />;
     }
