@@ -7,7 +7,7 @@ const Wrapper = styled.div<{ loaded: boolean }>`
   width: 100vw;
   height: 100vh;
   padding: 20px 10px;
-  color: ${Color.WHITE};
+  color: ${Color.SECOUNDARY};
   background-color: ${Color.DARK};
   font-size: 1.2rem;
   inset: 0;
@@ -39,7 +39,7 @@ export default function Loading({ isLoading }: Props) {
     if (isLoading) return;
     setTimeout(() => {
       setLoaded(true);
-    }, 1000);
+    }, 0);
   }, [isLoading]);
 
   return (

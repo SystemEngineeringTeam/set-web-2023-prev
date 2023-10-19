@@ -17,7 +17,7 @@ const Path = styled.path`
 `;
 
 const Polygon = styled.polygon<{ bg?: boolean }>`
-  fill: ${(props) => (props.bg ? Color.WHITE : Color.DARK)};
+  fill: ${(props) => (props.bg ? Color.SECOUNDARY : Color.DARK)};
 `;
 
 const Rect = styled.rect<{ level: number }>`

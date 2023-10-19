@@ -18,7 +18,7 @@ const DrawerWrapper = styled.div<{ open: boolean }>`
   & > div {
     height: 100vh;
     width: min(100vw, 300px);
-    background-color: ${Color.WHITE};
+    background-color: ${Color.SECOUNDARY};
     position: fixed;
     top: 0;
     right: 0;

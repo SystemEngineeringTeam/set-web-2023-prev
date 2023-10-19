@@ -26,7 +26,7 @@ const Center = styled.div`
 `;
 
 const Title = styled.h1`
-  color: ${Color.WHITE};
+  color: ${Color.SECOUNDARY};
   font-size: 2.5rem;
   text-align: center;
 `;
@@ -57,7 +57,7 @@ export default function TopSection() {
             snsName={snsName as SNSName}
             id={SNSAccount[snsName as SNSName]!}
             color={Color.DARK}
-            fill={Color.WHITE}
+            fill={Color.SECOUNDARY}
             key={snsName}
           />
         ))}

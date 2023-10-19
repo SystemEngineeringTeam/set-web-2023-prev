@@ -11,7 +11,7 @@ import { Menus, MenusBreakPoint } from "@/const/page/header";
 const HeaderEle = styled.header`
   height: 40px;
   padding: 0 10px;
-  background-color: ${Color.WHITE};
+  background-color: ${Color.SECOUNDARY};
   position: fixed;
   top: 0;
   left: 0;
