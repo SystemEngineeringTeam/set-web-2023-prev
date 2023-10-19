@@ -3,6 +3,7 @@ import App from "./component/App";
 import styled from "styled-components";
 import { SNSName } from "@/type";
 import { SNSAccount } from "@/const/md/sns";
+import { TopText } from "@/const/md/home";
 
 const TopEle = styled.section`
   height: 100vh;
@@ -45,8 +46,9 @@ export default function TopSection() {
   return (
     <TopEle>
       <Center>
-        <Title>ようこそ</Title>
-        <Title>システム工学研究会へ</Title>
+        {TopText.map((text) => (
+          <Title key={text}>{text}</Title>
+        ))}
       </Center>
 
       <Desctop>
@@ -58,7 +60,7 @@ export default function TopSection() {
             fill={Color.WHITE}
             key={snsName}
           />
-        ))  }
+        ))}
       </Desctop>
     </TopEle>
   );
