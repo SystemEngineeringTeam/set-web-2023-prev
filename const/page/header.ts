@@ -1,3 +1,5 @@
+import { Menu } from "@/type";
+
 export const Menus: readonly Menu[] = [
   { title: "Activity", link: "/activiity" },
   { title: "Member", link: "/member" },

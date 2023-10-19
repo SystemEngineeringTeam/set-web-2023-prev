@@ -5,6 +5,7 @@ import Image from "next/image";
 import { MenuWrapper, Propaty, Spacer } from "@/component/base/header/component/shared/menu";
 import Battery from "./Battery";
 import { useEffect, useState } from "react";
+import { Menu } from "@/type";
 
 const Time = styled.span<{ width?: number }>`
   width: ${(props) => (props.width ? `${props.width}px` : "initial")};

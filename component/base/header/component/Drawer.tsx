@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { useRouter } from "next/router";
 import Color from "@/const/style/Color";
 import CloseIcon from "@mui/icons-material/Close";
+import { Menu } from "@/type";
 
 const DrawerWrapper = styled.div<{ open: boolean }>`
   height: 100vh;
