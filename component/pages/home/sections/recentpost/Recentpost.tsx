@@ -3,7 +3,7 @@ import Card from "./components/Card";
 import { Posts } from "@/const/md/home";
 
 const RecentpostEle = styled.section`
-  padding: 30px 10px 50px;
+  padding: 30px 10px 70px;
 `;
 
 const Title = styled.h2`
