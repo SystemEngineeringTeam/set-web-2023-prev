@@ -2,7 +2,7 @@ import { SNSAccountObj } from "@/type";
 
 export const SNSAccount: SNSAccountObj = {
   twitter: "set_official",
-  instagram: "sysken.ait",
+  instagram: "ait.sysken",
   github: "SystemEngineeringTeam",
-  qiita: "ait-sysken"
+  qiita: "ait-sysken",
 };
