@@ -1,17 +1,11 @@
 import { Center, Main } from "@/component/share";
 import { formatdate } from "@/component/util/util";
 import { Post } from "@/type";
-import ReactMarkdown from "react-markdown";
-import remarkBreaks from "remark-breaks";
 import styled from "styled-components";
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import remarkGfm from "remark-gfm";
 import { MdStyled } from "@/component/share/md";
-import remarkRehype from "remark-rehype";
-import rehypeRaw from "rehype-raw";
-import rehypeStringify from "rehype-stringify";
 import Color from "@/const/style/Color";
 import { useRouter } from "next/router";
+import Md2Html from "@/component/share/md2html";
 
 const Top = styled.div`
   margin-top: 30px;
@@ -64,32 +58,7 @@ export default function Post({ post }: Props) {
         </Top>
 
         <MdStyled>
-          <ReactMarkdown
-            remarkPlugins={[
-              remarkBreaks,
-              remarkGfm,
-              remarkRehype,
-              rehypeRaw,
-              rehypeStringify,
-            ]}
-            components={{
-              code(props) {
-                const { children, className, node, ...rest } = props;
-                const match = /language-(\w+)/.exec(className || "");
-                return match ? (
-                  <SyntaxHighlighter language={match[1]} PreTag="div">
-                    {String(children).replace(/\n$/, "")}
-                  </SyntaxHighlighter>
-                ) : (
-                  <code {...rest} className={className}>
-                    {children}
-                  </code>
-                );
-              },
-            }}
-          >
-            {post.content}
-          </ReactMarkdown>
+          <Md2Html child={post.content} />
         </MdStyled>
 
         <Bottom>

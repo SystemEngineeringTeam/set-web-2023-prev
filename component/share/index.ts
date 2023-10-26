@@ -11,3 +11,8 @@ export const Center = styled.div`
   width: 100%;
   max-width: 800px;
 `;
+
+export const Title = styled.h1`
+  margin-bottom: 20px;
+  border-bottom: 1px solid #000;
+`;

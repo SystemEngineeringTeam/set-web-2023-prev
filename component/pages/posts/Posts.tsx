@@ -1,13 +1,8 @@
-import { Center, Main } from "@/component/share";
+import { Center, Main, Title } from "@/component/share";
 import { formatdate } from "@/component/util/util";
 import { Post } from "@/type";
 import { useRouter } from "next/router";
 import styled from "styled-components";
-
-const Title = styled.h1`
-  margin-bottom: 20px;
-  border-bottom: 1px solid #000;
-`;
 
 const Post = styled.div`
   padding: 10px;
