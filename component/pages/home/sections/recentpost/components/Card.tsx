@@ -29,7 +29,7 @@ const CardContent = styled.p`
 export default function Card(post: Post) {
   return (
     <CardEle>
-      <CardTitle>{post.title}</CardTitle>
+      <CardTitle>{post.meta.title}</CardTitle>
       <CardContent>{post.content}</CardContent>
     </CardEle>
   );

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Card from "./components/Card";
-import { Posts } from "@/const/md/home";
+import { Post } from "@/type";
 
 const RecentpostEle = styled.section`
   padding: 40px 10px 90px;
@@ -23,14 +23,18 @@ const Grid = styled.div`
   gap: 30px;
 `;
 
-export default function RecentpostSection() {
+type Props = {
+  posts: Post[];
+};
+
+export default function RecentpostSection({ posts }: Props) {
   return (
     <RecentpostEle>
       <Title>Recent Post</Title>
 
       <Grid>
-        {Posts.slice(0, 3).map((post) => (
-          <Card {...post} key={post.title} />
+        {posts.slice(0, 3).map((post) => (
+          <Card {...post} key={post.meta.title} />
         ))}
       </Grid>
     </RecentpostEle>
