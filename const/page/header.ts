@@ -1,7 +1,7 @@
 import { Menu } from "@/type";
 
 export const Menus: readonly Menu[] = [
-  { title: "Activity", link: "/activiity" },
+  { title: "Activity", link: "/activity" },
   { title: "Member", link: "/member" },
   { title: "Access", link: "/access" },
   { title: "Award", link: "/award" },

@@ -4,16 +4,16 @@ import Md2Html from "@/component/share/md2html";
 import { Post } from "@/type";
 
 type Props = {
-  member: Post;
+  activity: Post;
 };
 
-export default function Member({ member }: Props) {
+export default function ActivityContent({ activity }: Props) {
   return (
     <Main>
       <Center>
-        <Title>Member</Title>
+        <Title>Activity</Title>
         <MdStyledMember>
-          <Md2Html child={member.content} />
+          <Md2Html child={activity.content} />
         </MdStyledMember>
       </Center>
     </Main>
