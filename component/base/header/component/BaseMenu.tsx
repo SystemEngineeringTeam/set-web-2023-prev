@@ -1,7 +1,6 @@
 import styled from "@emotion/styled";
 import { toDigits } from "@/util/util";
 import { useRouter } from "next/router";
-import Image from "next/image";
 import { MenuWrapper, Propaty, Spacer } from "@/component/base/header/component/shared/menu";
 import Battery from "./Battery";
 import { useEffect, useState } from "react";
@@ -60,7 +59,7 @@ export default function BaseMenu({ menus }: Props) {
 
   return (
     <MenuWrapper>
-      <Image
+      <img
         src="/img/set.webp"
         alt="logo"
         height={40}

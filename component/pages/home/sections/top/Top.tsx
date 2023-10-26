@@ -4,7 +4,6 @@ import styled from "styled-components";
 import { SNSName } from "@/type";
 import { SNSAccount } from "@/const/md/sns";
 import { DesctopImages, TopText } from "@/const/md/home";
-import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const TopEle = styled.section`
@@ -52,7 +51,13 @@ const Desctop = styled.div`
   }
 `;
 
-const ImageSwitch = styled(Image)<{ time: number }>`
+const ImageSwitch = styled.img`
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  inset: 0px;
+  object-fit: cover;
+  color: transparent;
   filter: opacity(0.7) blur(1px);
   animation: easing 5s;
 
@@ -92,14 +97,7 @@ export default function TopSection() {
 
   function ImageSwicher() {
     if (!img) return null;
-    return (
-      <ImageSwitch
-        src={img}
-        alt="デスクトップ背景"
-        layout="fill"
-        objectFit="cover"
-      />
-    );
+    return <ImageSwitch src={img} alt="デスクトップ背景" />;
   }
 
   return (

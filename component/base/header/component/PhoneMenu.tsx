@@ -1,7 +1,10 @@
 import styled from "styled-components";
 import Color from "@/const/style/Color";
-import { MenuWrapper, Propaty, Spacer } from "@/component/base/header/component/shared/menu";
-import Image from "next/image";
+import {
+  MenuWrapper,
+  Propaty,
+  Spacer,
+} from "@/component/base/header/component/shared/menu";
 import { useRouter } from "next/router";
 import { useRecoilState } from "recoil";
 import { menuOpenState } from "@/state/state";
@@ -41,7 +44,7 @@ export default function PhoneMenu() {
 
   return (
     <MenuWrapper>
-      <Image
+      <img
         src="/img/set.webp"
         alt="logo"
         height={60}
