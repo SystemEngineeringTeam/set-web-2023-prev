@@ -11,8 +11,19 @@ export type SNSAccountObj = {
 
 export type Colors = keyof typeof Color;
 
-export type Post = {
+export type PostMeta = {
   title: string;
-  date: Date;
+  category: string;
+  tags: string[];
+  created_at: string;
+  updated_at: string;
+  published: boolean;
+  number: number;
+};
+
+export type Post = {
+  filename: string;
+  id: number;
+  meta: PostMeta;
   content: string;
 };
