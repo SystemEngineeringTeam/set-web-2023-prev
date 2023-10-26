@@ -1,3 +1,4 @@
+import Color from "@/const/style/Color";
 import styled from "styled-components";
 
 export const MdStyled = styled.div`
@@ -82,5 +83,27 @@ export const MdStyled = styled.div`
     tr:nth-child(odd) td {
       background-color: #f9f9f9;
     }
+  }
+`;
+
+export const MdStyledMember = styled.div`
+  max-width: 600px;
+  margin-inline: auto;
+
+  & > * {
+    padding-left: 30px;
+  }
+
+  a {
+    color: ${Color.LIGHT};
+  }
+
+  h1 {
+    padding-left: 0;
+    margin-top: 40px;
+  }
+
+  h2 {
+    margin-top: 10px;
   }
 `;
