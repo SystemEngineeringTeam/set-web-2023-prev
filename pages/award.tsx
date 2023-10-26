@@ -7,11 +7,7 @@ import path from "path";
 import matter from "gray-matter";
 import { GetStaticProps } from "next";
 import { Post } from "@/type";
-import dynamic from "next/dynamic";
-
-const AwardContent = dynamic(() => import("@/component/pages/award/Award"), {
-  ssr: false,
-});
+import AwardContent from "@/component/pages/award/Award";
 
 type Props = {
   award: Post;

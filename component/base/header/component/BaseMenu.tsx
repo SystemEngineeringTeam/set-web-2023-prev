@@ -1,7 +1,11 @@
 import styled from "@emotion/styled";
 import { toDigits } from "@/util/util";
 import { useRouter } from "next/router";
-import { MenuWrapper, Propaty, Spacer } from "@/component/base/header/component/shared/menu";
+import {
+  MenuWrapper,
+  Propaty,
+  Spacer,
+} from "@/component/base/header/component/shared/menu";
 import Battery from "./Battery";
 import { useEffect, useState } from "react";
 import { Menu } from "@/type";
@@ -28,7 +32,7 @@ type Props = {
 
 export default function BaseMenu({ menus }: Props) {
   const [time, setTime] = useState<null | Date>(null);
-  const [batteryLevel, setBatteryLevel] = useState<number>(100);
+  const [batteryLevel, setBatteryLevel] = useState<number | null>(null);
   const [isCharging, setIsCharging] = useState<boolean>(false);
   const router = useRouter();
 
@@ -80,7 +84,9 @@ export default function BaseMenu({ menus }: Props) {
 
       <Spacer />
 
-      <Battery level={batteryLevel} isCharging={isCharging} />
+      {batteryLevel !== null && (
+        <Battery level={batteryLevel} isCharging={isCharging} />
+      )}
       {time && (
         <>
           <Propaty>

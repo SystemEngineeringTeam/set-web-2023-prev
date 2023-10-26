@@ -7,11 +7,7 @@ import path from "path";
 import matter from "gray-matter";
 import { GetStaticProps } from "next";
 import { Post } from "@/type";
-import dynamic from "next/dynamic";
-
-const NewsContent = dynamic(() => import("@/component/pages/posts/Posts"), {
-  ssr: false,
-});
+import NewsContent from "@/component/pages/posts/Posts";
 
 type Props = {
   posts: Post[];
