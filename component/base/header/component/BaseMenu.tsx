@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { toDigits } from "@/util/util";
+import { toDigits } from "@/component/util/util";
 import { useRouter } from "next/router";
 import {
   MenuWrapper,

@@ -42,7 +42,7 @@ export default function NotFound() {
 
   return (
     <>
-      <Metadata />
+      <Metadata subtitle={"404"} />
       <GlobalStyle />
 
       <Header />

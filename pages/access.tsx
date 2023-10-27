@@ -16,7 +16,7 @@ type Props = {
 export default function Access({ access }: Props) {
   return (
     <>
-      <Metadata />
+      <Metadata subtitle={"Access"} />
       <GlobalStyle />
 
       <Header />

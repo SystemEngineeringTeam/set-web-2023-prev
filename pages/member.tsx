@@ -16,7 +16,7 @@ type Props = {
 export default function Member({ member }: Props) {
   return (
     <>
-      <Metadata />
+      <Metadata subtitle={"Member"} />
       <GlobalStyle />
 
       <Header />

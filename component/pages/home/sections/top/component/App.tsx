@@ -6,7 +6,7 @@ import {
 } from "@/component/base/icons";
 import { SNS } from "@/const/base/sns";
 import { SNSName } from "@/type";
-import { getSNSUrl, jumpToLink } from "@/util/util";
+import { getSNSUrl, jumpToLink } from "@/component/util/util";
 import styled from "styled-components";
 
 const Icon = styled.div<{ color: string; fill: string; snsName: string }>`

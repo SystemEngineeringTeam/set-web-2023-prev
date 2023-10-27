@@ -16,7 +16,7 @@ type Props = {
 export default function QA({ qa }: Props) {
   return (
     <>
-      <Metadata />
+      <Metadata subtitle={"Q&A"} />
       <GlobalStyle />
 
       <Header />

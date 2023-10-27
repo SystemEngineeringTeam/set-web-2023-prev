@@ -16,7 +16,7 @@ type Props = {
 export default function Activity({ activity }: Props) {
   return (
     <>
-      <Metadata />
+      <Metadata subtitle={"Activity"} />
       <GlobalStyle />
 
       <Header />

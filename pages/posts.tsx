@@ -16,7 +16,7 @@ type Props = {
 export default function News({ posts }: Props) {
   return (
     <>
-      <Metadata />
+      <Metadata subtitle={"Posts"} />
       <GlobalStyle />
 
       <Header />

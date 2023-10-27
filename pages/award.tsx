@@ -16,7 +16,7 @@ type Props = {
 export default function Award({ award }: Props) {
   return (
     <>
-      <Metadata />
+      <Metadata subtitle={"Award"} />
       <GlobalStyle />
 
       <Header />
