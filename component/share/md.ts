@@ -98,6 +98,28 @@ export const MdStyledMember = styled.div`
     color: ${Color.LIGHT};
   }
 
+  h1, h2 {
+    padding-left: 0;
+    margin-top: 40px;
+  }
+
+  h3 {
+    margin-top: 20px;
+  }
+`;
+
+export const MdStyledOther = styled.div`
+  max-width: 600px;
+  margin-inline: auto;
+
+  & > * {
+    padding-left: 30px;
+  }
+
+  a {
+    color: ${Color.LIGHT};
+  }
+
   h1 {
     padding-left: 0;
     margin-top: 40px;

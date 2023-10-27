@@ -1,5 +1,5 @@
 import { Center, Main, Title } from "@/component/share";
-import { MdStyledMember } from "@/component/share/md";
+import { MdStyledOther } from "@/component/share/md";
 import Md2Html from "@/component/share/md2html";
 import { Post } from "@/type";
 
@@ -12,9 +12,9 @@ export default function ActivityContent({ activity }: Props) {
     <Main>
       <Center>
         <Title>Activity</Title>
-        <MdStyledMember>
+        <MdStyledOther>
           <Md2Html child={activity.content} />
-        </MdStyledMember>
+        </MdStyledOther>
       </Center>
     </Main>
   );
