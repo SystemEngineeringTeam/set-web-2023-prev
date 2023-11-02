@@ -28,6 +28,10 @@ export const MdStyled = styled.div`
     transition-duration: 0.3s;
   }
 
+  img {
+    width: 100%;
+  }
+
   ul,
   ol {
     margin: 20px 0;
@@ -106,6 +110,10 @@ export const MdStyledMember = styled.div`
   h3 {
     margin-top: 20px;
   }
+
+  img {
+    width: 100%;
+  }
 `;
 
 export const MdStyledOther = styled.div`
@@ -127,5 +135,9 @@ export const MdStyledOther = styled.div`
 
   h2 {
     margin-top: 10px;
+  }
+
+  img {
+    width: 100%;
   }
 `;
