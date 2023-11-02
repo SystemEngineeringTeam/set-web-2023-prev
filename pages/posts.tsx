@@ -27,7 +27,7 @@ export default function News({ posts }: Props) {
 }
 
 export const getStaticProps: GetStaticProps = () => {
-  const contentsDir = path.join(process.cwd(), "public/markdown/contents");
+  const contentsDir = path.join(process.cwd(), "public/markdown/posts");
   const filenames = fs.readdirSync(contentsDir);
 
   const posts = filenames.map((filename) => {

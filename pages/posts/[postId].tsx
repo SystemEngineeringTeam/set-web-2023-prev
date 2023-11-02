@@ -37,7 +37,7 @@ export const getStaticProps: GetStaticProps = (context) => {
   const filename = `${params.postId}.html.md`;
   const filePath = path.join(
     process.cwd(),
-    `public/markdown/contents/${filename}`
+    `public/markdown/posts/${filename}`
   );
   const fileContents = fs.readFileSync(filePath, "utf8");
   const md = matter(fileContents);
@@ -55,7 +55,7 @@ export const getStaticProps: GetStaticProps = (context) => {
 };
 
 export const getStaticPaths: GetStaticPaths = () => {
-  const contentsDir = path.join(process.cwd(), "public/markdown/contents");
+  const contentsDir = path.join(process.cwd(), "public/markdown/posts");
   const filenames = fs.readdirSync(contentsDir);
 
   const postPaths = filenames.map((filename) => {
