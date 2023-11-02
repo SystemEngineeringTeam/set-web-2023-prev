@@ -73,9 +73,7 @@ export default function BaseMenu({ menus }: Props) {
         `}
         onClick={() => router.push("/")}
       />
-      <Propaty gap={5} onClick={() => router.push("/")}>
-        シス研
-      </Propaty>
+
       {menus.map((menu) => (
         <Propaty gap={5} key={menu.link} onClick={() => router.push(menu.link)}>
           {menu.title}
