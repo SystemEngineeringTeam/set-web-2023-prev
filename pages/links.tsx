@@ -16,7 +16,7 @@ type Props = {
 export default function Links({ links }: Props) {
   return (
     <>
-      <Metadata subtitle={"Member"} />
+      <Metadata subtitle={"Links"} />
       <GlobalStyle />
 
       <Header />
