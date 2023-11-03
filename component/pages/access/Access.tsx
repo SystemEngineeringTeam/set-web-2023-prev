@@ -1,4 +1,5 @@
 import { Center, Main, Title } from "@/component/share";
+import { MdStyled } from "@/component/share/md";
 import Md2Html from "@/component/share/md2html";
 import { Post } from "@/type";
 
@@ -11,7 +12,9 @@ export default function AccessContent({ access }: Props) {
     <Main>
       <Center>
         <Title>Access</Title>
-        <Md2Html child={access.content} />
+        <MdStyled>
+          <Md2Html child={access.content} />
+        </MdStyled>
       </Center>
     </Main>
   );

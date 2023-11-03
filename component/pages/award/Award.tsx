@@ -1,4 +1,5 @@
 import { Center, Main, Title } from "@/component/share";
+import { MdStyledMember } from "@/component/share/md";
 import Md2Html from "@/component/share/md2html";
 import { Post } from "@/type";
 
@@ -11,7 +12,9 @@ export default function AwardContent({ award }: Props) {
     <Main>
       <Center>
         <Title>Award</Title>
-        <Md2Html child={award.content} />
+        <MdStyledMember>
+          <Md2Html child={award.content} />
+        </MdStyledMember>
       </Center>
     </Main>
   );

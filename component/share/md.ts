@@ -22,6 +22,17 @@ export const MdStyled = styled.div`
     padding-bottom: 10px;
   }
 
+  h3 {
+    margin: 30px 0;
+    margin-bottom: 10px;
+    font-size: 125%;
+    font-weight: 700;
+  }
+
+  p {
+    margin: 20px 0;
+  }
+
   a {
     color: #0a9b94;
     text-decoration: none;
@@ -29,7 +40,12 @@ export const MdStyled = styled.div`
   }
 
   img {
-    width: 100%;
+    max-width: 100%;
+    border: 1px solid #eee;
+  }
+
+  iframe {
+    max-width: 100%;
   }
 
   ul,
@@ -102,7 +118,8 @@ export const MdStyledMember = styled.div`
     color: ${Color.LIGHT};
   }
 
-  h1, h2 {
+  h1,
+  h2 {
     padding-left: 0;
     margin-top: 40px;
   }
