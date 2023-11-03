@@ -4,14 +4,14 @@ import { useRouter } from "next/router";
 import styled from "styled-components";
 
 const FooterEle = styled.footer`
-  height: 250px;
+  /* height: 250px; */
   line-height: 25px;
   color: ${Color.WHITE};
   background-color: ${Color.LIGHT};
 `;
 
 const Container = styled.div`
-  height: 220px;
+  /* height: 220px; */
   padding: 30px 100px;
 
   @media (width < 800px) {
