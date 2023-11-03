@@ -7,6 +7,7 @@ export const Menus: readonly Menu[] = [
   { title: "Access", link: "/access" },
   { title: "Award", link: "/award" },
   { title: "Posts", link: "/posts" },
+  { title: "Links", link: "/links" },
   { title: "Q&A", link: "/qa" },
 ] as const;
 
